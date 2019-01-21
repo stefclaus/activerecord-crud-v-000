@@ -88,7 +88,6 @@ def can_update_multiple_items_at_once
   5.times do |i|
     Movie.create(title: "Movie_#{i}", release_date: 2000+i)
   end
-  movie = Movie.find_by(title: "Movie")
   movie.all.update({title: "A Movie"})
 end
 
